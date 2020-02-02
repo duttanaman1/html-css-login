@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div id="fb-root"></div>
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/498286.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" placeholder="Username" id="username">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Password" id="password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onclick="validate()">
+							Login
+						</button>
+					</div>
+					<div style="padding: 10px;"></div>
+					 <div class="container-login100-form-btn">
+					 	<a class='btn fb' style="background-color: white" href="fb login/html of sign in page.html">
+    
+          <svg class="centerHV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 267" width="25" height="25">
+        <g fill="white">
+<!--          from wikicommons -->
+<path id="Blue_1_" fill="#3C5A99" d="M248.082,262.307c7.854,0,14.223-6.369,14.223-14.225V18.812
+	c0-7.857-6.368-14.224-14.223-14.224H18.812c-7.857,0-14.224,6.367-14.224,14.224v229.27c0,7.855,6.366,14.225,14.224,14.225
+	H248.082z"/>
+<path id="f" fill="#FFFFFF" d="M182.409,262.307v-99.803h33.499l5.016-38.895h-38.515V98.777c0-11.261,3.127-18.935,19.275-18.935
+	l20.596-0.009V45.045c-3.562-0.474-15.788-1.533-30.012-1.533c-29.695,0-50.025,18.126-50.025,51.413v28.684h-33.585v38.895h33.585
+	v99.803H182.409z"/>
+
+          </path>
+        </g>
+    </svg>
+    
+    
+    
+    <strong>Login</strong>
+    <span>with</span> 
+    <strong>Facebook</strong>
+
+    </span>
+  </a>
+					 </div>
+
+	<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onclick="addin()">
+							Signup
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script type="text/javascript"></script>
+	<!--login of facebook javascript code-->
+<script type="text/javascript">
+	  		var loginlist = [{"userlist":[{"username":"usr1", "password":"u123"}, {"username":"usr2", "password":"u123"}, {"username":"usr3", "password":"u123"}], "ID":1}];
+		// var premloginlist=[{"adminlist":[{"username":"admin1", "password":"a123"},{"username":"admin2", "password":"a123"}, {"username":"admin3", "password":"a123"}], "ID":2}];
+         var logged = false;
+         var premloginlist=[{"adminlist":[{"username":"admin1", "password":"a123"},{"username":"admin2", "password":"a123"}, {"username":"admin3", "password":"a123"}], "ID":2}];
+	  function validate()
+    {
+        var username = document.getElementById("username").value;
+        console.log(username);
+        var password = document.getElementById("password").value;
+
+		console.log(premloginlist[0].ID);
+        if(loginlist[0].ID=1)
+        {
+			for(var i =0; i<loginlist[0].userlist.length; i++){
+				if(username == loginlist[0].userlist[i].username && password == loginlist[0].userlist[i].password){
+					logged= true;
+				}
+			}
+			if(logged){
+			alert("User login");
+
+				}
+			else
+			{
+			
+			
+			alert("User login fail");
+
+			}
+		}
+		
+		logged=false;
+		if(premloginlist[0].ID=2){
+			for(let k =0; k<premloginlist[0].adminlist.length; k++){
+				console.log(k);
+				if(username == premloginlist[0].adminlist[k].username && password == premloginlist[0].adminlist[k].password){
+					logged= true;
+					console.log(logged)
+				}
+			}
+		
+			if(logged){
+			alert("Admin login");
+			}
+			
+			else{
+			alert("admin login fail");
+			}
+	}
+		
+
+		
+
+    }
+
+    
+</script>
+	</script>
+</body>
+</html>
